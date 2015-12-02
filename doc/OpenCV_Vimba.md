@@ -28,7 +28,7 @@ pip install matplotlib
 ##### 3. AVT Vimba
 (1) [AVT官网](https://www.alliedvision.com/en/products/software.html)下载并安装。由于官方仅提供了C/C++的API，因此想使用Python的同学有几个选择：使用ctypes，或者使用pymba。
 
-(2) 这里要感谢伟大的Github，给我们节约了无数的时间，也让我们能够学习到最先进的代码。pymba的Github地址，https://github.com/morefigs/pymba。这里安装过程同pip，下载解压到某个文件夹后，使用cmd shell，cd到相应目录，输入`python setup.py install`。
+(2) 这里要感谢伟大的Github，给我们节约了无数的时间，也让我们能够学习到最先进的代码。pymba的Github地址，[https://github.com/morefigs/pymba]()。这里安装过程同pip，下载解压到某个文件夹后，使用cmd shell，cd到相应目录，输入`python setup.py install`。
 
 ![安装pymba](https://raw.githubusercontent.com/onlytjt/MarkdownSource/master/pic/Vimba_2.png)
 
@@ -41,7 +41,7 @@ vimbaC_path = r'D:\Program Files\Allied Vision\Vimba_1.4\VimbaC\Bin\VimbaC.dll'
 关于Vimba相关API的使用，建议查阅官方的Manual。关于cv2的使用，我后续还会持续更新，迫不及待的小伙伴，可以先自行Google。
 
 最后，把我初步的代码附上，我尽可能地将注释写详细~
-```
+```python
 # 实现功能：驱动AVT相机，实时显示图像
 # 时间：2015.11.17
 import cv2
@@ -118,5 +118,5 @@ if __name__ == "__main__":
 ```
 
 ***
-**By tjt
-2015.11.17**
+**By tjt**
+**2015.11.17**
