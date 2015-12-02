@@ -5,10 +5,10 @@
 目前在搞一个禁播视频站，主要内容都是一些大陆被墙的动漫啊，美剧啥的，比如我最爱的死亡笔记。内容不包含18禁的~感觉有些小伙伴要失望咯。
 
 #####1. Android入门素材
-以下罗列在我学习过程中使用的感觉还算不错的素材
-a. Official Android Training：developer.android.com/training/index.html
-b. 上述Android官方教程中文翻译版本：http://hukai.me/android-training-course-in-chinese/index.html
-c. imooc网站[Android攻城狮入门系列]：http://www.imooc.com/index/search?words=android
+以下罗列在我学习过程中使用的感觉还算不错的素材  
+a. Official Android Training：developer.android.com/training/index.html  
+b. 上述Android官方教程中文翻译版本：http://hukai.me/android-training-course-in-chinese/index.html  
+c. imooc网站[Android攻城狮入门系列]：http://www.imooc.com/index/search?words=android  
 d.《第一行代码-Android》pdf我放到自己的百度网盘里面，希望大家不要去告诉作者(笑)
 链接: http://pan.baidu.com/s/1sjy3rw5  密码: 7gy6
 
@@ -122,14 +122,14 @@ Xml文件只有简单地一个Button和VideoView控件，节约篇幅就不上�
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-这里需要多啰嗦的，也是经常会困惑刚入门同志的几个点。
-a. 增加的权限开头android.permission是小写的，Android Studio可能会默认补全为大写，导致没有相应权限。
-b. VideoView虽然可以播放网络视频，但是网络视频流实际是分为Http协议和RTSP(Real Time Streaming Protocal)两种。RTSP协议支持实时播放，而Http协议则需要缓冲一定时间才能够播放。
-c. 国内传统的视频站给出的URL并不是真实视频地址，因此像优酷，爱奇艺等网站的视频并不能直接使用VideoView播放。
+这里需要多啰嗦的，也是经常会困惑刚入门同志的几个点。  
+a. 增加的权限开头android.permission是小写的，Android Studio可能会默认补全为大写，导致没有相应权限。  
+b. VideoView虽然可以播放网络视频，但是网络视频流实际是分为Http协议和RTSP(Real Time Streaming Protocal)两种。RTSP协议支持实时播放，而Http协议则需要缓冲一定时间才能够播放。  
+c. 国内传统的视频站给出的URL并不是真实视频地址，因此像优酷，爱奇艺等网站的视频并不能直接使用VideoView播放。  
 
 #####4. Reference：
-a) http://www.androidbegin.com/tutorial/android-video-streaming-videoview-tutorial/
-b) http://www.cnblogs.com/plokmju/p/android_videoview.html
+a) http://www.androidbegin.com/tutorial/android-video-streaming-videoview-tutorial/  
+b) http://www.cnblogs.com/plokmju/p/android_videoview.html  
 
 ***
 **By tjt**  
