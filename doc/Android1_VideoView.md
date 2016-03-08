@@ -1,21 +1,28 @@
-###Android入门1：使用VideoView和MediController播放视频
+### Android入门1：使用VideoView和MediController播放视频
 
-最近在搞Android，入门曲线还是挺陡峭的，主要还是自己对Java的理解不够深入。前后搞了一周多了，把最近学习到的一些知识点总结归纳一下，正所谓温故而知新。
+最近在搞Android，入门曲线还是挺陡峭的，主要还是自己对Java的理解不够深入。前后学习了几天，把最近学习到的一些知识点总结归纳一下，正所谓温故而知新。
 
-目前在搞一个禁播视频站，主要内容都是一些大陆被墙的动漫啊，美剧啥的，比如我最爱的死亡笔记。内容不包含18禁的~感觉有些小伙伴要失望咯。
+目前想搞一个禁播视频站，主要内容都是一些大陆被墙的动漫啊，美剧啥的，比如我最爱的死亡笔记。内容不包含18禁的~感觉有些小伙伴要失望咯。
 
-#####1. Android入门素材
+##### 1. Android入门素材
+
 以下罗列在我学习过程中使用的感觉还算不错的素材  
+
 a. Official Android Training：developer.android.com/training/index.html  
+
 b. 上述Android官方教程中文翻译版本：http://hukai.me/android-training-course-in-chinese/index.html  
+
 c. imooc网站[Android攻城狮入门系列]：http://www.imooc.com/index/search?words=android  
+
 d.《第一行代码-Android》pdf我放到自己的百度网盘里面，希望大家不要去告诉作者(笑)
+
 链接: http://pan.baidu.com/s/1sjy3rw5  密码: 7gy6
 
-#####2. VideoView和MediaController介绍
+##### 2. VideoView和MediaController介绍
+
 Android VideoView类为我们提供了十分方便的视频播放API，其主要方法有。
 
-```java
+``` java
 void start()：开始播放
 void stopPlayback()：停止播放
 void pause()：暂停
@@ -36,7 +43,7 @@ setOnPreparedListener(MediaPlayer.OnPreparedListener l)：：监听视频装载�
 
 除了播放视频，Media Controller类则为我们提供了一个悬浮的操作栏，包含了播放，暂停，快进，快退，上一个，下一个等功能键。甚至连拖动进度条至某处播放都已经实现，简直是业界良心。在使用前VideoView和MediController需要相互指定控件。其内置方法有。
 
-```java
+``` java
 boolean isShowing()：当前悬浮控制栏是否显示。
 void setMediaPlayer(MediaController.MediaPlayerControl player)：设置控制的组件。
 void setPrevNextListeners(View.OnClickListener next,View.OnClickListener prev)：设置上一个视频、下一个视频的切换事件。
@@ -44,8 +51,9 @@ void setPrevNextListeners(View.OnClickListener next,View.OnClickListener prev)�
 
 默认情况下，Media Controller悬浮显示3s后隐藏，触摸响应的VideoView呼出。默认上一个，下一个按钮隐藏。
 
-#####3.播放视频Demo程序
-```java
+##### 3.播放视频Demo程序
+
+``` java
 package cn.edu.sjtu.videoplayer.bannedvideoplayer;
 
 import android.app.ProgressDialog;
@@ -117,26 +125,30 @@ public class MainActivity extends AppCompatActivity {
 
 Xml文件只有简单地一个Button和VideoView控件，节约篇幅就不上了，由于博主一直使用真机Debug，这里就不截图了。如果需要播放网络视频，只需要看我注释的两行，将`setVideoPath()`更改为相应的`setVideoURI()`就可以了。这里需要在AndroidManifest.xml添加两条权限。
 
-```xml
+``` xml
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
 这里需要多啰嗦的，也是经常会困惑刚入门同志的几个点。  
+
 a. 增加的权限开头android.permission是小写的，Android Studio可能会默认补全为大写，导致没有相应权限。  
+
 b. VideoView虽然可以播放网络视频，但是网络视频流实际是分为Http协议和RTSP(Real Time Streaming Protocal)两种。RTSP协议支持实时播放，而Http协议则需要缓冲一定时间才能够播放。  
+
 c. 国内传统的视频站给出的URL并不是真实视频地址，因此像优酷，爱奇艺等网站的视频并不能直接使用VideoView播放。  
 
-#####4. Reference：
+##### 4. Reference：
+
 a) http://www.androidbegin.com/tutorial/android-video-streaming-videoview-tutorial/  
+
 b) http://www.cnblogs.com/plokmju/p/android_videoview.html  
 
 ***
+
 **By tjt**  
+
 **2015.12.02**
-
-
-
 
 
 
