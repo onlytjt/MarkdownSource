@@ -134,5 +134,15 @@
     }
 ```
 
-完成以上步骤就可以得到最终的效果图啦。这里还想推荐给小伙伴的是github上的一个开源项目：[mikepenz/Android-Iconics](https://github.com/mikepenz/Android-Iconics)。这里有许许多多基于Material Design的icon，
+完成以上步骤就可以得到最终的效果图啦。
+
+这里还想推荐给小伙伴的是github上的一个开源项目：[mikepenz/Android-Iconics](https://github.com/mikepenz/Android-Iconics)。这里有许许多多基于Material Design的icon，貌似这是个大神~他的SlideMenu的插件也很好用。希望能给小伙伴省下一些寻找资源的时间，开发更加顺利。
+
+![](https://raw.githubusercontent.com/onlytjt/MarkdownSource/master/pic/Android3_4.jpg)
+
+***
+
+**By tjt**
+
+**2016.03.14**
 
