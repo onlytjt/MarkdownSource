@@ -69,9 +69,70 @@
 ......
 ```
 
-此时运行程序，便可以看到我们自定义的主题已经生效，但此时
+此时运行程序，便可以看到我们自定义的主题已经生效，但此时app的上方还是空空如也，应为我们还没有为其添加Toolbar。
 
+![](https://raw.githubusercontent.com/onlytjt/MarkdownSource/master/pic/Android3_3.png)
 
+#### 3. 添加Toolbar
 
+首先我们要给Toolbal新建一个布局文件，/res/layout/toolbar.xml。这里使用v7包中的Toolbar。使用gradle的同学记得添加依赖。`compile 'com.android.support:appcompat-v7:23.1.1'`
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<android:android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/color_primary"
+/>
+```
+
+然后我们在主布局文件中引入toolbar，/res/layout/activity_main.xml
+
+```xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/toolbar"/>
+
+    <TextView
+            android:text="@string/hello_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+    />
+</LinearLayout>
+```
+
+最后，我们在`onCreate()`中进行设置。
+
+```java
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+      
+      	private Toolbar mToolbar;
+    	private ActionBar mActionbar;
+      
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        mActionbar = getSupportActionBar();  // 转换为Actionbar操作
+        mActionbar.setTitle("爱实习  爱工作");  // 设置toolbar标题
+      	// 设置toolbar左侧icon，也成为Navigation Icon
+        mToolbar.setNavigationIcon(R.mipmap.ic_menu_white_36dp); 
+    }
+```
+
+完成以上步骤就可以得到最终的效果图啦。这里还想推荐给小伙伴的是github上的一个开源项目：[mikepenz/Android-Iconics](https://github.com/mikepenz/Android-Iconics)。这里有许许多多基于Material Design的icon，
 
