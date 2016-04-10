@@ -121,10 +121,10 @@
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-      
+
       	private Toolbar mToolbar;
     	private ActionBar mActionbar;
-      
+
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         mActionbar = getSupportActionBar();  // 转换为Actionbar操作
@@ -145,4 +145,3 @@
 **By tjt**
 
 **2016.03.14**
-
